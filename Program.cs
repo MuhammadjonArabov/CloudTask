@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            ConvertToBinary();
+            ConvertToOctal();
         }
 
         static void OutputSpiralMatrix()
@@ -76,6 +76,28 @@
             }
 
             Console.WriteLine($"2-lik sanoq sistemasida: {binary}");
+        }
+        static void ConvertToOctal()
+        {
+            Console.Write("10-lik sanoq sistemasidagi sonni kiriting: ");
+            int decimalNumber = int.Parse(Console.ReadLine());
+
+            if (decimalNumber == 0)
+            {
+                Console.WriteLine("0");
+                return;
+            }
+
+            string octal = string.Empty;
+
+            while (decimalNumber > 0)
+            {
+                int remainder = decimalNumber % 8;
+                octal = remainder + octal;
+                decimalNumber /= 8;
+            }
+
+            Console.WriteLine($"8-lik sanoq sistemasidagi qiymat: {octal}");
         }
     }
 }
