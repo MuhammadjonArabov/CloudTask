@@ -1,2 +1,2 @@
 # CloudTask
-blutliy texnalogiyadan vazifa
+blutli texnalogiyadan vazifa
